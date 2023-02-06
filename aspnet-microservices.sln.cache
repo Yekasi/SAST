@@ -1,0 +1,329 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_SolutionProjectConfiguration>Debug|Any CPU</_SolutionProjectConfiguration>
+    <_SolutionProjectToolsVersion>4.0</_SolutionProjectToolsVersion>
+    <_SolutionProjectCacheVersion>4.0</_SolutionProjectCacheVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <_SolutionProjectProjects Include="..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj" />
+    <_SolutionProjectProjects Include="ApiGateways\OcelatApiGw\OcelatApiGw.csproj" />
+    <_SolutionProjectProjects Include="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" />
+    <_SolutionProjectProjects Include="docker-compose.dcproj" />
+    <_SolutionProjectProjects Include="Services\Basket\Basket.API\Basket.API.csproj" />
+    <_SolutionProjectProjects Include="Services\Catalog\Catalog.API\Catalog.API.csproj" />
+    <_SolutionProjectProjects Include="Services\Discount\Discount.API\Discount.API\Discount.API.csproj" />
+    <_SolutionProjectProjects Include="Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj" />
+    <_SolutionProjectProjects Include="Services\Ordering\Ordering.API\Ordering.API.csproj" />
+    <_SolutionProjectProjects Include="Services\Ordering\Ordering.Application\Ordering.Application.csproj" />
+    <_SolutionProjectProjects Include="Services\Ordering\Ordering.Domain\Ordering.Domain.csproj" />
+    <_SolutionProjectProjects Include="Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <BuildLevel0 Include="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel0>
+  </ItemGroup>
+  <ItemGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <BuildLevel0 Include="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel0>
+  </ItemGroup>
+  <UsingTask TaskName="Microsoft.Build.Tasks.CreateTemporaryVCProject" AssemblyName="Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <UsingTask TaskName="Microsoft.Build.Tasks.ResolveVCProjectOutput" AssemblyName="Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <PropertyGroup Condition=" '$(Configuration)' == '' ">
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '' ">
+    <Platform>Any CPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(AspNetConfiguration)' == '') ">
+    <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionDir>C:\Users\ghaziasgara\source\repos\AfshinOnline\AspnetMicroservices\src\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>aspnet-microservices.sln</SolutionFileName>
+    <SolutionName>aspnet-microservices</SolutionName>
+    <SolutionPath>C:\Users\ghaziasgara\source\repos\AfshinOnline\AspnetMicroservices\src\aspnet-microservices.sln</SolutionPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and ('$(MSBuildToolsVersion)' == '3.5' or '$(MSBuildToolsVersion)' == '3.0')">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '4.0'">v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+        <ProjectConfiguration Project="{4E66E91A-6905-4EF1-9481-17EE8798A429}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{0F109068-FBDA-44D0-B8FD-1238D2DE3476}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{CB7601A8-74FF-4D1D-9B2D-28E47F3C5E8D}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{00DC1FFB-9683-47FC-9E56-C9ACF9D2AF55}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{935B43F9-CFE5-4356-AB77-23BEF89BEBE8}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{621CC05F-909A-4BBC-A5B0-E15338BA84AE}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{8A977E33-00E5-4075-8CDC-CE7916D416CE}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{CED5729B-F23E-447E-8DE4-DC8BF05803C0}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{FE7FD4A2-1C9B-4738-B7C6-1B9EC3D1C14D}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{B5C1922F-94AE-4066-B084-6BCF9227C22A}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{58E0101C-A812-400D-8838-CA5741298453}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{7CA1F714-F1B6-452D-B424-2488F24001A1}">Debug|AnyCPU</ProjectConfiguration>
+      </SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+        <ProjectConfiguration Project="{4E66E91A-6905-4EF1-9481-17EE8798A429}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{0F109068-FBDA-44D0-B8FD-1238D2DE3476}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{CB7601A8-74FF-4D1D-9B2D-28E47F3C5E8D}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{00DC1FFB-9683-47FC-9E56-C9ACF9D2AF55}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{935B43F9-CFE5-4356-AB77-23BEF89BEBE8}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{621CC05F-909A-4BBC-A5B0-E15338BA84AE}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{8A977E33-00E5-4075-8CDC-CE7916D416CE}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{CED5729B-F23E-447E-8DE4-DC8BF05803C0}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{FE7FD4A2-1C9B-4738-B7C6-1B9EC3D1C14D}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{B5C1922F-94AE-4066-B084-6BCF9227C22A}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{58E0101C-A812-400D-8838-CA5741298453}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{7CA1F714-F1B6-452D-B424-2488F24001A1}">Release|AnyCPU</ProjectConfiguration>
+      </SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <Target Name="ValidateSolutionConfiguration">
+    <Error Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')" />
+    <Warning Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')" />
+    <Message Text="Building solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="'$(CurrentSolutionConfigurationContents)' != ''" />
+  </Target>
+  <Target Name="ValidateToolsVersions">
+    <Error Text="The tools version &quot;$(MSBuildToolsVersion)&quot; of the solution does not support building projects with a different tools version." Code="MSB4149" HelpKeyword="MSBuild.SolutionToolsVersionDoesNotSupportProjectToolsVersion" Condition="'$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')" />
+  </Target>
+  <Target Name="Services\Catalog\Catalog_API" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Catalog\Catalog_API:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Catalog\Catalog_API:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Catalog\Catalog_API:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Catalog\Catalog.API\Catalog.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="docker-compose" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="docker-compose:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="docker-compose:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="docker-compose:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;docker-compose.dcproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Basket\Basket_API" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Basket\Basket_API:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Basket\Basket_API:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Basket\Basket_API:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Basket\Basket.API\Basket.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_API" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_API:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_API:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_API:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.API\Discount.API\Discount.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_Grpc" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_Grpc:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_Grpc:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Discount\Discount_Grpc:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Discount\Discount.Grpc\Discount.Grpc\Discount.Grpc.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_API" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_API:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_API:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_API:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.API\Ordering.API.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Domain" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Domain:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Domain:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Domain:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Domain\Ordering.Domain.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Application" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Application:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Application:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Application:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Application\Ordering.Application.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Infrastructure" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Infrastructure:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Infrastructure:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Services\Ordering\Ordering_Infrastructure:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure\Ordering.Infrastructure.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="BuildingBlocks\EventBus_Messages" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="BuildingBlocks\EventBus_Messages:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="BuildingBlocks\EventBus_Messages:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="BuildingBlocks\EventBus_Messages:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="ApiGateways\OcelatApiGw" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="ApiGateways\OcelatApiGw:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="ApiGateways\OcelatApiGw:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="ApiGateways\OcelatApiGw:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <Warning Text="The project file &quot;ApiGateways\OcelatApiGw\OcelatApiGw.csproj&quot; is not supported by MSBuild and cannot be built." Code="MSB4078" HelpKeyword="MSBuild.SolutionParseUnknownProjectType" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="ApiGateways\Shopping_Aggregator" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(Shopping_AggregatorBuildOutput)">
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="Shopping_AggregatorBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="Shopping_AggregatorBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ApiGateways\Shopping_Aggregator:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Targets="Clean" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Targets="Clean" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="ApiGateways\Shopping_Aggregator:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(Shopping_AggregatorBuildOutput)">
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Targets="Rebuild" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="Shopping_AggregatorBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Targets="Rebuild" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="Shopping_AggregatorBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ApiGateways\Shopping_Aggregator:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Targets="Publish" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj" Targets="Publish" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Build" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <CallTarget Targets="Services\Catalog\Catalog_API;docker-compose;Services\Basket\Basket_API;Services\Discount\Discount_API;Services\Discount\Discount_Grpc;Services\Ordering\Ordering_API;Services\Ordering\Ordering_Domain;Services\Ordering\Ordering_Application;Services\Ordering\Ordering_Infrastructure;BuildingBlocks\EventBus_Messages;ApiGateways\OcelatApiGw" RunEachTargetSeparately="true" />
+  </Target>
+  <Target Name="Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Clean" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" />
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <CallTarget Targets="Services\Catalog\Catalog_API:Clean;docker-compose:Clean;Services\Basket\Basket_API:Clean;Services\Discount\Discount_API:Clean;Services\Discount\Discount_Grpc:Clean;Services\Ordering\Ordering_API:Clean;Services\Ordering\Ordering_Domain:Clean;Services\Ordering\Ordering_Application:Clean;Services\Ordering\Ordering_Infrastructure:Clean;BuildingBlocks\EventBus_Messages:Clean;ApiGateways\OcelatApiGw:Clean" RunEachTargetSeparately="true" />
+    <Delete Files="aspnet-microservices.sln.cache" />
+  </Target>
+  <Target Name="Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Rebuild" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <CallTarget Targets="Services\Catalog\Catalog_API:Rebuild;docker-compose:Rebuild;Services\Basket\Basket_API:Rebuild;Services\Discount\Discount_API:Rebuild;Services\Discount\Discount_Grpc:Rebuild;Services\Ordering\Ordering_API:Rebuild;Services\Ordering\Ordering_Domain:Rebuild;Services\Ordering\Ordering_Application:Rebuild;Services\Ordering\Ordering_Infrastructure:Rebuild;BuildingBlocks\EventBus_Messages:Rebuild;ApiGateways\OcelatApiGw:Rebuild" RunEachTargetSeparately="true" />
+  </Target>
+  <Target Name="Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Publish" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" />
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <CallTarget Targets="Services\Catalog\Catalog_API:Publish;docker-compose:Publish;Services\Basket\Basket_API:Publish;Services\Discount\Discount_API:Publish;Services\Discount\Discount_Grpc:Publish;Services\Ordering\Ordering_API:Publish;Services\Ordering\Ordering_Domain:Publish;Services\Ordering\Ordering_Application:Publish;Services\Ordering\Ordering_Infrastructure:Publish;BuildingBlocks\EventBus_Messages:Publish;ApiGateways\OcelatApiGw:Publish" RunEachTargetSeparately="true" />
+  </Target>
+</Project>

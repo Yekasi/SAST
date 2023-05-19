@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Services/Catalog/Catalog.API/Catalog.API.csproj", "Services/Catalog/Catalog.API/"]
-RUN dotnet restore "Services/Catalog/Catalog.API/Catalog.API.csproj"
+COPY ["ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj", "ApiGateways/Shopping.Aggregator/"]
+RUN dotnet restore "ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj"
 COPY . .
-WORKDIR "/src/Services/Catalog/Catalog.API"
-RUN dotnet build "Catalog.API.csproj" -c Release -o /app/build
+WORKDIR "/src/ApiGateways/Shopping.Aggregator"
+RUN dotnet build "Shopping.Aggregator.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Catalog.API.csproj" -c Release -o /app/publish
+RUN dotnet publish "Shopping.Aggregator.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Catalog.API.dll"]
+ENTRYPOINT ["dotnet", "Shopping.Aggregator.dll"]

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:c340aaea-8e84-424c-95b3-7ebeb7bd25fc" version="1">
+  <metadata>
+    <timestamp>2022-10-19T16:06:48+02:00</timestamp>
+    <tools>
+      <tool>
+        <vendor>anchore</vendor>
+        <name>syft</name>
+        <version>0.55.0</version>
+      </tool>
+    </tools>
+    <component bom-ref="2bf390b6c6ed4fb" type="file">
+      <name>C:\Users\ghaziasgara\source\repos\onRent\europa-ui</name>
+    </component>
+  </metadata>
+  <components></components>
+</bom>

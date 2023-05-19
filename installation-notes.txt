@@ -1,0 +1,18 @@
+   _______   ___  ___  ________  ________  ________  ________
+  |\  ___ \ |\  \|\  \|\   __  \|\   __  \|\   __  \|\   __  \
+  \ \   __/|\ \  \\\  \ \  \|\  \ \  \|\  \ \  \|\  \ \  \|\  \
+   \ \  \_|/_\ \  \\\  \ \   _  _\ \  \\\  \ \   ____\ \   __  \
+    \ \  \_|\ \ \  \\\  \ \  \\  \\ \  \\\  \ \  \___|\ \  \ \  \
+     \ \_______\ \_______\ \__\\ _\\ \_______\ \__\    \ \__\ \__\
+      \|_______|\|_______|\|__|\|__|\|_______|\|__|     \|__|\|__|
+
+1. The following components were removed and replaced with local components:
+      "ember-bootstrap-datetimepicker": "^0.4.0",
+      "ember-cli-full-calendar": "0.0.9",
+      "ember-cli-moment-shim": "0.6.2",
+      "ember-spectrum-color-picker": "0.1.4",
+
+2. The bower package 'spectrum' has had a number of updates. At the minute the updated file can be found at the root of the application (spectrum.js).
+
+3. To have multiple local support for moment.js we need to replace:
+	 bower_components/moment/min/moment.min.js with bower_components/moment/min/moment-with-locales.min.js

@@ -1,0 +1,58 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+trigger:
+- develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '6.10'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g npm@6.14.7
+  displayName: 'Installing compatible version of npm'
+
+- script: |
+    npm install -g bower@1.8.10
+  displayName: 'Installing bower'
+
+- script: |
+    npm install -g ember-cli@2.18.2
+  displayName: 'Installing ember-cli'
+
+- script: |
+    bower install
+  displayName: 'bower install'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: 'vendor/faker'
+    contents: '*'
+    targetFolder: 'bower_components/Faker/build/build'
+  displayName: 'Copying faker.js to bower_components'
+
+- script: |
+    npm ci
+  displayName: 'npm ci'
+
+- script: |
+    ember build
+  displayName: 'ember build'
+
+- script: |
+    ember build --output-path='test-dist' --environment=test
+    ember exam --path='test-dist' --filter='jshint'
+    ember exam --path='test-dist' --split=10 --parallel --filter='acceptance.core.system'
+    ember exam --path='test-dist' --split=2  --parallel --filter='acceptance.core.order'
+    ember exam --path='test-dist' --split=2  --parallel --filter='acceptance.customform'
+  displayName: 'Run tests'
+
+- script: |
+    ember deploy staging --verbose --activate
+  displayName: 'Deploy to staging'

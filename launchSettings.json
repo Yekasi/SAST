@@ -4,19 +4,19 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:6420",
+      "applicationUrl": "http://localhost:7008",
       "sslPort": 0
     }
   },
   "profiles": {
-    "Shopping.Aggregator": {
+    "Basket.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:5004",
+      "applicationUrl": "http://localhost:5001",
       "dotnetRunMessages": true
     },
     "IIS Express": {
